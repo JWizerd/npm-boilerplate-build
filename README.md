@@ -19,7 +19,7 @@ install all globally required packages for CLI
 npm run preinstall
 ```
 
-### scripts: paths will need to be changed relative to your project*
+### scripts: paths will need to be changed relative to your project
 ```
 "scripts": {
   "preinstall": "npm install --global postcss-cli autoprefixer cssnano-cli uglify-js",
