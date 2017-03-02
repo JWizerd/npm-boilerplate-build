@@ -16,7 +16,7 @@ npm install
 npm run preinstall /* install all globally required packages for CLI */
 ```
 
-### scripts: paths following *--include-path will need to be changed for your project*
+### scripts: paths following *paths will will need to be changed relative to your project*
 ```
 "scripts": {
   "preinstall": "npm install --global postcss-cli autoprefixer cssnano-cli uglify-js",
