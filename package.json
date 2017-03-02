@@ -1,0 +1,18 @@
+{
+  "name": "npm-sass-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npm install --global postcss-cli autoprefixer cssnano-cli uglify-js",
+    "build-css": "node-sass --include-path scss assets/scss/main.scss assets/css/main.css && postcss --use autoprefixer -r ./assets/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "production": "cssnano ./assets/css/main.css ./assets/css/main.min.css && uglifyjs ./assets/js/main.js --compress --output ./assets/js/main.min.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.5.0",
+    "nodemon": "^1.11.0"
+  }
+}
