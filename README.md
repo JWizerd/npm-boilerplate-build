@@ -1,6 +1,6 @@
-# npm-sass-tutorial
+# NPM Boilderplate Build
 
-## use npm to compile sass and watch for changes using scripts in package.json
+## use npm as a taskrunner using scripts in package.json
 
 ### devDependencies
 1. **node-sass** for sass,
