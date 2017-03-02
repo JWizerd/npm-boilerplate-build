@@ -2,7 +2,7 @@
 
 ## use npm as a taskrunner using scripts in package.json
 
-### devDependencies
+### dependencies
 1. **node-sass** for sass,
 2. **nodemon** for watch changes
 3. **postcss-cli** dependency for autoprefixer
