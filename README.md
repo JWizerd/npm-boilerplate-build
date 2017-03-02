@@ -13,7 +13,10 @@
 ### install script
 ```
 npm install
-npm run preinstall /* install all globally required packages for CLI */
+```
+install all globally required packages for CLI
+```
+npm run preinstall
 ```
 
 ### scripts: paths following *paths will will need to be changed relative to your project*
@@ -27,10 +30,16 @@ npm run preinstall /* install all globally required packages for CLI */
 ```
 
 ### CLI Commands
+**compile sass to css and and add vendor prefixes**
 ```
-npm run build-css /* compile sass to css and and add vendor prefixes */
+npm run build-css
+```
+**watch for sass changes and if changes run build-css**
+```
+npm run watch-css /* watch for sass changes and if changes run build-css
+```
+**minify css and js and create new .min.css & .min.js files**
 
-npm run watch-css /* watch for sass changes and if changes run build-css */
-
-npm run production /* minify css and js and create new *.min.css & *.min.js files
+```
+npm run production
 ```
