@@ -36,7 +36,7 @@ npm run build-css
 ```
 **watch for sass changes and if changes run build-css**
 ```
-npm run watch-css /* watch for sass changes and if changes run build-css
+npm run watch-css
 ```
 **minify css and js and create new .min.css & .min.js files**
 
