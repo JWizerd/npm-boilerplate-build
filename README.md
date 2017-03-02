@@ -1,4 +1,4 @@
-# NPM Boilderplate Build
+# NPM Boilerplate Build
 
 ## use npm as a taskrunner using scripts in package.json
 
