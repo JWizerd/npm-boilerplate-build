@@ -9,6 +9,7 @@
 4. **autoprefixer** inject vendor prefixes into css
 5. **cssnano** minify css for production
 6. **uglifyjs** minify js for production
+7. **concat** concatenate files together
 
 ### install script
 ```
@@ -22,10 +23,10 @@ npm run preinstall
 ### scripts: paths will need to be changed relative to your project
 ```
 "scripts": {
-  "preinstall": "npm install --global postcss-cli autoprefixer cssnano-cli uglify-js",
-  "build-css": "node-sass --include-path scss assets/scss/main.scss assets/css/main.css && postcss --use autoprefixer -r ./assets/css/main.css",
+  "preinstall": "npm install --global postcss-cli autoprefixer cssnano-cli uglify-js concat",
+  "build-css": "concat -o ./assets/scss/main.scss ./assets/scss/*.scss && node-sass --include-path scss assets/scss/main.scss assets/css/main.css && postcss --use autoprefixer -r ./assets/css/main.css",
   "watch-css": "nodemon -e scss -x \"npm run build-css\"",
-  "production": "cssnano ./assets/css/main.css ./assets/css/main.min.css && uglifyjs ./assets/js/main.js --compress --output ./assets/js/main.min.js"
+  "production": "concat -o ./assets/js/dist/main.js ./assets/js/*.js && uglifyjs ./assets/js/dist/main.js --compress --output ./assets/js/dist/main.min.js && cssnano ./assets/css/main.css ./assets/css/main.min.css"
 }
 ```
 
@@ -43,3 +44,4 @@ npm run watch-css
 ```
 npm run production
 ```
+**concat and minify css and js files. NOTE: for proper functionality make sure to create a dist/ folder inside of asset folders for you sass and js. js/dist and scss/dist. This makes that concat output file isn't also concatenated on production.**
